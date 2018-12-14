@@ -37,10 +37,10 @@ public class Config {
         public static String NAMESPACE = "";
 
         /**
-         * Application code is showed in sky-walking-ui. Suggestion: set an unique name for each application, one
-         * application's nodes share the same code.
+         * Application code is showed in skywalking-ui. Suggestion: set a unique name for each service,
+         * service instance nodes share the same code
          */
-        public static String APPLICATION_CODE = "";
+        public static String SERVICE_NAME = "";
 
         /**
          * Authentication active is based on backend setting, see application.yml for more details.
@@ -50,7 +50,7 @@ public class Config {
 
         /**
          * Negative or zero means off, by default. {@link #SAMPLE_N_PER_3_SECS} means sampling N {@link TraceSegment} in
-         * 10 seconds tops.
+         * 3 seconds tops.
          */
         public static int SAMPLE_N_PER_3_SECS = -1;
 
@@ -70,6 +70,16 @@ public class Config {
          * Skywalking team may ask for these files in order to resolve compatible problem.
          */
         public static boolean IS_OPEN_DEBUGGING_CLASS = false;
+
+        /**
+         * Active V2 header in default
+         */
+        public static boolean ACTIVE_V2_HEADER = true;
+
+        /**
+         * Deactive V1 header in default
+         */
+        public static boolean ACTIVE_V1_HEADER = false;
     }
 
     public static class Collector {
@@ -82,32 +92,9 @@ public class Config {
          */
         public static long APP_AND_SERVICE_REGISTER_CHECK_INTERVAL = 3;
         /**
-         * discovery rest check interval
+         * Collector skywalking trace receiver service addresses.
          */
-        public static long DISCOVERY_CHECK_INTERVAL = 60;
-        /**
-         * Collector naming/jetty service addresses.
-         * Primary address setting.
-         *
-         * e.g.
-         * SERVERS="127.0.0.1:10800"  for single collector node.
-         * SERVERS="10.2.45.126:10800,10.2.45.127:10800"  for multi collector nodes.
-         */
-        public static String SERVERS = "";
-
-        /**
-         * Collector agent_gRPC/grpc service addresses.
-         * Secondary address setting, only effect when #SERVERS is empty.
-         *
-         * By using this, no discovery mechanism provided. The agent only uses these addresses to uplink data.
-         *
-         */
-        public static String DIRECT_SERVERS = "";
-
-        /**
-         * Collector service discovery REST service name
-         */
-        public static String DISCOVERY_SERVICE_NAME = "/agent/gRPC";
+        public static String BACKEND_SERVICE = "";
     }
 
     public static class Jvm {
@@ -127,9 +114,9 @@ public class Config {
         /**
          * The buffer size of application codes and peer
          */
-        public static int APPLICATION_CODE_BUFFER_SIZE = 10 * 10000;
+        public static int SERVICE_CODE_BUFFER_SIZE = 10 * 10000;
 
-        public static int OPERATION_NAME_BUFFER_SIZE = 1000 * 10000;
+        public static int ENDPOINT_NAME_BUFFER_SIZE = 1000 * 10000;
     }
 
     public static class Logging {
@@ -160,9 +147,16 @@ public class Config {
     public static class Plugin {
         public static class MongoDB {
             /**
-             * If true, trace all the parameters, default is false. Only trace the operation, not include parameters.
+             * If true, trace all the parameters in MongoDB access, default is false. Only trace the operation, not include parameters.
              */
             public static boolean TRACE_PARAM = false;
+        }
+
+        public static class Elasticsearch {
+            /**
+             * If true, trace all the DSL(Domain Specific Language) in ElasticSearch access, default is false.
+             */
+            public static boolean TRACE_DSL = false;
         }
     }
 }

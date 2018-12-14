@@ -215,15 +215,27 @@ Apache 2.0 licenses
 The following components are provided under the Apache License. See project link for details.
 The text of each license is also included at licenses/LICENSE-[project].txt.
 
-    raphw (byte-buddy) 1.7.9: http://bytebuddy.net/ , Apache 2.0
-    Google: grpc 1.8.0: https://grpc.io/ , Apache 2.0
-    Google: gprc-java 1.8.0: https://github.com/grpc/grpc-java, Apache 2.0
-    Google: guava 19.0: https://github.com/google/guava , Apache 2.0
+    Apache: groovy 2.4.5-indy: https://github.com/apache/groovy, Apache 2.0
+    Apache: httpcomponents 4.x.x: http://hc.apache.org/index.html, Apache 2.0
+
+========================================================================
+Apache 2.0 licenses
+========================================================================
+
+The following components are provided under the Apache License. See project link for details.
+The text of each license is the standard Apache 2.0 license.
+
+    raphw (byte-buddy) 1.9.2: http://bytebuddy.net/ , Apache 2.0
+    Google: grpc 1.14.0: https://grpc.io/ , Apache 2.0
+    Google: grpc 1.15.1: https://grpc.io/ , Apache 2.0
+    Google: gprc-java 1.14.0: https://github.com/grpc/grpc-java, Apache 2.0
+    Google: gprc-java 1.15.1: https://github.com/grpc/grpc-java, Apache 2.0
+    Google: guava 20.0: https://github.com/google/guava , Apache 2.0
     Google: gson 2.8.1: https://github.com/google/gson , Apache 2.0
-    Google: opencensus-java 0.8.0: https://github.com/census-instrumentation/opencensus-java , Apache 2.0
+    Google: opencensus-java 0.12.3: https://github.com/census-instrumentation/opencensus-java , Apache 2.0
     Google: proto-google-common-protos 0.1.9: https://github.com/googleapis/googleapis , Apache 2.0
     Google: jsr305 3.0.0: http://central.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.0/jsr305-3.0.0.pom , Apache 2.0
-    Elasticsearch BV (Elasticsearch) 5.5.0: https://www.elastic.co/products/elasticsearch , Apache 2.0
+    Elasticsearch BV (Elasticsearch) 6.3.2: https://www.elastic.co/products/elasticsearch , Apache 2.0
     lang-mustache-client 5.5.0: https://github.com/elastic/elasticsearch/tree/master/modules/lang-mustache , Apache 2.0
     parent-join-client 5.5.0: https://github.com/elastic/elasticsearch/tree/master/modules/parent-join , Apache 2.0
     reindex-client 5.5.0: https://github.com/elastic/elasticsearch/tree/master/modules/reindex , Apache 2.0
@@ -241,7 +253,6 @@ The text of each license is also included at licenses/LICENSE-[project].txt.
     Spring Boot 1.5.10: https://spring.io/, Apache 2.0
     Spring Cloud Config 1.4.1: https://github.com/spring-cloud/spring-cloud-config, Apache-2.0
     Spring Cloud Netflix Zuul 1.3.0: https://github.com/spring-cloud/spring-cloud-netflix, Apache 2.0
-    Apache: httpcomponents 4.x.x: http://hc.apache.org/index.html, Apache 2.0
     Apache: commons-logging 1.1.3: https://github.com/apache/commons-logging, Apache 2.0
     Apache: commons-codec 1.10: https://github.com/apache/commons-codec, Apache 2.0
     Apache: commons-dbcp 1.4: https://github.com/apache/commons-dbcp, Apache 2.0
@@ -256,7 +267,6 @@ The text of each license is also included at licenses/LICENSE-[project].txt.
     Apache: commons-configuration 1.8: https://github.com/apache/commons-configuration, Apache 2.0
     Apache: commons-io 2.4: https://github.com/apache/commons-io, Apache 2.0
     Apache: tomcat 8.5.27: https://github.com/apache/tomcat/tree/trunk, Apache 2.0
-    Apache: groovy 2.4.5-indy: https://github.com/apache/groovy, Apache 2.0
     netty 5.5.0: https://github.com/netty/netty/blob/4.1/LICENSE.txt, Apache 2.0
     annotations 13.0: http://www.jetbrains.org, Apache 2.0
     compiler 0.9.3: https://github.com/spullara/mustache.java, Apache 2.0
@@ -288,9 +298,14 @@ The text of each license is also included at licenses/LICENSE-[project].txt.
     servo 0.10.1: https://github.com/Netflix/servo, Apache 2.0
     validation-api 1.1.0.Final: http://beanvalidation.org/licensing/, Apache 2.0
     zuul-core 1.3.0: https://github.com/Netflix/zuul, Apache 2.0
-    ben-manes caffeine 2.6.2: https://github.com/ben-manes/caffeine, Apache 2.0
+    HikariCP 3.1.0: https://github.com/brettwooldridge/HikariCP, Apache 2.0
     zipkin 2.9.1: https://github.com/openzipkin/zipkin, Apache 2.0
     sharding-jdbc-core 2.0.3: https://github.com/sharding-sphere/sharding-sphere, Apache 2.0
+    kubernetes-client 2.0.0: https://github.com/kubernetes-client/java, Apache 2.0
+    proto files from istio/istio: https://github.com/istio/istio  Apache 2.0
+    proto files from istio/api: https://github.com/istio/api      Apache 2.0
+    consul-client 1.2.6: https://github.com/rickfast/consul-client, Apache 2.0
+    okhttp 3.9.0: https://github.com/square/okhttp, Apache 2.0
 
 ========================================================================
 MIT licenses
@@ -320,6 +335,8 @@ The text of each license is also included at licenses/LICENSE-[project].txt.
     Google: protobuf-java 3.4.0: https://github.com/google/protobuf/blob/master/java/pom.xml , BSD-3-Clause
     Google: protobuf-java-util 3.4.0: https://github.com/google/protobuf/blob/master/java/pom.xml , BSD-3-Clause
     reflectasm 1.11.3: https://github.com/EsotericSoftware/reflectasm , BSD-3-Clause
+    
+    gogo-protobuf, proto files: https://github.com/gogo/protobuf  BSD-2-Clause
 
 ========================================================================
 MPL 2.0 licenses
@@ -370,6 +387,8 @@ MIT licenses
 antv/data-set	0.8.6:	https://github.com/antvis/data-set	MIT
 add-dom-event-listener  1.0.2:  https://github.com/yiminghe/add-dom-event-listener      MIT
 antd    3.2.2:  https://github.com/ant-design/ant-design        MIT
+iconfont(from antd): https://github.com/ant-design/antd-init/tree/master/examples/local-iconfont   MIT
+ant-design-pro  1.3.0:  https://github.com/ant-design/ant-design-pro    MIT     , declare license in package.json only.
 async-validator 1.8.2:  https://github.com/yiminghe/async-validator     MIT
 babel/polyfill	7.0.0-beta.42:	https://github.com/babel/babel/tree/master/packages/babel-polyfill	MIT	, declare license in package.json only.
 babel/runtime   7.0.0-beta.42: https://github.com/babel/babel/tree/master/packages/babel-runtime       MIT , declare license in package.json only.
@@ -422,6 +441,7 @@ rc-animate      2.4.4:  https://github.com/react-component/animate      MIT
 rc-calendar     9.5.0:  https://github.com/react-component/calendar     MIT
 rc-checkbox     2.1.5:  https://github.com/react-component/checkbox     MIT
 rc-drawer-menu  0.5.5:  https://github.com/ant-motion/drawer-menu       MIT
+rc-dropdown     2.1.0:  https://github.com/react-component/dropdown     MIT
 rc-form 2.1.7:  https://github.com/react-component/form MIT
 rc-input-number 4.0.2:  https://github.com/react-component/input-number MIT
 rc-menu 6.2.6:  https://github.com/react-component/menu MIT

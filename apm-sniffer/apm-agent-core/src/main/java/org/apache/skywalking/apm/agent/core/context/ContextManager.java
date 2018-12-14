@@ -42,6 +42,7 @@ import org.apache.skywalking.apm.util.StringUtil;
 public class ContextManager implements TracingContextListener, BootService, IgnoreTracerContextListener {
     private static final ILog logger = LogManager.getLogger(ContextManager.class);
     private static ThreadLocal<AbstractTracerContext> CONTEXT = new ThreadLocal<AbstractTracerContext>();
+    private static ThreadLocal<RuntimeContext> RUNTIME_CONTEXT = new ThreadLocal<RuntimeContext>();
     private static ContextManagerExtendService EXTEND_SERVICE;
 
     private static AbstractTracerContext getOrCreate(String operationName, boolean forceSampling) {
@@ -56,8 +57,8 @@ public class ContextManager implements TracingContextListener, BootService, Igno
                 }
                 context = new IgnoredTracerContext();
             } else {
-                if (RemoteDownstreamConfig.Agent.APPLICATION_ID != DictionaryUtil.nullValue()
-                    && RemoteDownstreamConfig.Agent.APPLICATION_INSTANCE_ID != DictionaryUtil.nullValue()
+                if (RemoteDownstreamConfig.Agent.SERVICE_ID != DictionaryUtil.nullValue()
+                    && RemoteDownstreamConfig.Agent.SERVICE_INSTANCE_ID != DictionaryUtil.nullValue()
                     ) {
                     context = EXTEND_SERVICE.createTraceContext(operationName, forceSampling);
                 } else {
@@ -198,11 +199,12 @@ public class ContextManager implements TracingContextListener, BootService, Igno
     }
 
     public static RuntimeContext getRuntimeContext() {
-        if (isActive()) {
-            return get().getRuntimeContext();
-        } else {
-            throw new IllegalStateException("No active context");
+        RuntimeContext runtimeContext = RUNTIME_CONTEXT.get();
+        if (runtimeContext == null) {
+            runtimeContext = new RuntimeContext(RUNTIME_CONTEXT);
+            RUNTIME_CONTEXT.set(runtimeContext);
         }
-    }
 
+        return runtimeContext;
+    }
 }
