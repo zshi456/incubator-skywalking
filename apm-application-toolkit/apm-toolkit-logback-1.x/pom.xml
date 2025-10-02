@@ -28,7 +28,7 @@
     <artifactId>apm-toolkit-logback-1.x</artifactId>
 
     <properties>
-        <logback-classic.version>1.2.3</logback-classic.version>
+        <logback-classic.version>1.5.14</logback-classic.version>
     </properties>
 
     <dependencies>
